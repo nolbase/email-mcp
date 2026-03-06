@@ -1,0 +1,46 @@
+{
+  "name": "@nolbase/dispatch-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for NolBase Dispatch — send email & SMS from any AI assistant",
+  "bin": {
+    "dispatch-mcp-server": "./dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts",
+    "dev": "tsup src/index.ts --format cjs --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "nolbase",
+    "dispatch",
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "email",
+    "sms"
+  ],
+  "author": "NolBase",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@nolbase/dispatch": "*",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
